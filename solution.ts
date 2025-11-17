@@ -50,12 +50,12 @@ class Person {
 
 
 
-type book = {
+type RatedBook = {
   title: string;
   rating: number;
 };
 
-const filterByRating = (books: book[]): book[] => {
+const filterByRating = (books: RatedBook[]): RatedBook[] => {
   books.forEach((book) => {
     if (typeof book.rating !== "number") {
       throw new Error(`${book.title}'s rating must be a number`);
@@ -72,8 +72,28 @@ const filterByRating = (books: book[]): book[] => {
 };
 
 
+type User = {
+    id : number ; 
+    name : string ; 
+    email : string ;
+    isActive : boolean ;
+}
 
+const filterActiveUsers = (users : User[]) : User[] => {
+     users.forEach((user, idx) => {
+        if(typeof user.id !== "number"){
+            throw new Error(`Invalid data type in index ${idx}`)
+        }
+        else if(typeof user.name !== "string" || typeof user.email !== "string"){
+            throw new Error(`Invalid data type in index ${idx}`)
+        }
+        else if(typeof user.isActive !== "boolean"){
+            throw new Error(`Invalid data type in index ${idx}`)
+        }
+     } )
 
+     return users.filter(user => user.isActive === true ) ; 
+}
 
 
 
