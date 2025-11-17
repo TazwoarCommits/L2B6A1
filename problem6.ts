@@ -15,10 +15,10 @@ const printBookDetails = (book: Book) => {
 };
 
 const myBook: Book = {
-  title: 'The Great Gatsby',
-  author: 'F. Scott Fitzgerald',
-  publishedYear: 1925,
-  isAvailable: true,
+  title: 'Game of thrones',
+  author: 'George R.R.Martin',
+  publishedYear: 2001,
+  isAvailable: false,
 };
 
 printBookDetails(myBook);
