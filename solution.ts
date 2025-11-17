@@ -12,10 +12,6 @@ const formatValue = (
   }
 };
 
-
-
-
-
 const getLength = (val: string | any[]): number => {
   if (typeof val === "string") {
     return val.length;
@@ -25,10 +21,6 @@ const getLength = (val: string | any[]): number => {
     throw new Error(`${val} has invalid data type`);
   }
 };
-
-
-
-
 
 class Person {
   name: string;
@@ -46,9 +38,6 @@ class Person {
     return `'Name : ${this.name} , Age : ${this.age}'`;
   }
 }
-
-
-
 
 type RatedBook = {
   title: string;
@@ -71,32 +60,50 @@ const filterByRating = (books: RatedBook[]): RatedBook[] => {
   });
 };
 
-
 type User = {
-    id : number ; 
-    name : string ; 
-    email : string ;
-    isActive : boolean ;
+  id: number;
+  name: string;
+  email: string;
+  isActive: boolean;
+};
+
+const filterActiveUsers = (users: User[]): User[] => {
+  users.forEach((user, idx) => {
+    if (typeof user.id !== "number") {
+      throw new Error(`Invalid data type in index ${idx}`);
+    } else if (
+      typeof user.name !== "string" ||
+      typeof user.email !== "string"
+    ) {
+      throw new Error(`Invalid data type in index ${idx}`);
+    } else if (typeof user.isActive !== "boolean") {
+      throw new Error(`Invalid data type in index ${idx}`);
+    }
+  });
+
+  return users.filter((user) => user.isActive === true);
+};
+
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isAvailable: boolean;
 }
 
-const filterActiveUsers = (users : User[]) : User[] => {
-     users.forEach((user, idx) => {
-        if(typeof user.id !== "number"){
-            throw new Error(`Invalid data type in index ${idx}`)
-        }
-        else if(typeof user.name !== "string" || typeof user.email !== "string"){
-            throw new Error(`Invalid data type in index ${idx}`)
-        }
-        else if(typeof user.isActive !== "boolean"){
-            throw new Error(`Invalid data type in index ${idx}`)
-        }
-     } )
-
-     return users.filter(user => user.isActive === true ) ; 
-}
-
-
-
-
-
-
+const printBookDetails = (book: Book) => {
+  if (
+    typeof book.title === "string" &&
+    typeof book.author === "string" &&
+    typeof book.publishedYear === "number" &&
+    typeof book.isAvailable === "boolean"
+  ) {
+    console.log(
+      `Title: ${book.title}, Author: ${book.author}, Published: ${
+        book.publishedYear
+      }, Available: ${book.isAvailable ? "Yes" : "No"}`
+    );
+  } else {
+    throw new Error("Invalid Data Type");
+  }
+};

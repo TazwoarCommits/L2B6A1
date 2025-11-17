@@ -1,4 +1,6 @@
-interface Book {
+{
+
+    interface Book {
     title : string ;
     author : string ;
     publishedYear : number ;
@@ -24,3 +26,4 @@ const myBook: Book = {
 printBookDetails(myBook);
 
 // `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable ? "Yes" : "No"}`
+}
