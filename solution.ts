@@ -107,3 +107,5 @@ const printBookDetails = (book: Book) => {
     throw new Error("Invalid Data Type");
   }
 };
+
+
