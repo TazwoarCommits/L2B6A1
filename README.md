@@ -8,28 +8,28 @@
 
 * ইন্টারফেস - অবজেক্ট শেপ এবং ক্লাস এর জন্য বেশি উপযোগী ।
 
-**_interface User {_**  
+**interface User {_**  
 **_name: string;_**  
 **_age: number;_**  
 **_}_**  
 
 * ইন্টারফেস মার্জ করা যায় রিডিক্লিয়ার এর মাধ্যমে, কিন্তু টাইপ এ  রিডিক্লিয়ার সম্ভব নয় ।
 
-  interface User {  name: string;  
-  }
+       interface User {  name: string;  
+        }
 
-  interface User {  
-  age: number;  
-  }
+       interface User {  
+       age: number;  
+       }
 
 * "extend" এর মাধ্যমে ইন্টারফেস বর্ধিত করা যায় ।
-  interface Animal {  
-  name: string;  
-  }  
+       interface Animal {  
+       name: string;  
+       }  
 
-  interface Dog extends Animal {  
-  bark(): void;  
-  }  
+       interface Dog extends Animal {  
+       bark(): void;  
+       }  
 
 * ইন্টারফেস অবজেক্ট, ক্লাস এর ডাটা টাইপ এর জন বেশি উপযোগী
 
@@ -44,6 +44,7 @@
 
 * টাইপ ইউনিয়ন ও ইন্টারসেকশন সাপোর্ট করে ।
 
-  type Status = "pending" | "success" 
-
+       type Status = "pending" | "success"   
+       type Animal = { name: string };
+       type Dog = Animal & { bark(): void }; 
 * 
