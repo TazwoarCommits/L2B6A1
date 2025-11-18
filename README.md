@@ -22,11 +22,11 @@
          age: number;  
        }
 
-* "extend" এর মাধ্যমে ইন্টারফেস বর্ধিত করা যায়  
+* "extend" এর মাধ্যমে ইন্টারফেস বর্ধিত করা যায় 
+ 
        interface Animal {  
        name: string;  
        }  
-
        interface Dog extends Animal {  
        bark(): void;  
        }  
