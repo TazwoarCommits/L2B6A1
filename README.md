@@ -8,18 +8,18 @@
 
 * ইন্টারফেস - অবজেক্ট শেপ এবং ক্লাস এর জন্য বেশি উপযোগী ।
 
-**interface User {_**  
+**_interface User {_**  
 **_name: string;_**  
 **_age: number;_**  
 **_}_**  
 
 * ইন্টারফেস মার্জ করা যায় রিডিক্লিয়ার এর মাধ্যমে, কিন্তু টাইপ এ  রিডিক্লিয়ার সম্ভব নয় ।
 
-       interface User {  name: string;  
-        }
-
        interface User {  
-       age: number;  
+         name: string;  
+       }
+       interface User {  
+         age: number;  
        }
 
 * "extend" এর মাধ্যমে ইন্টারফেস বর্ধিত করা যায় ।
