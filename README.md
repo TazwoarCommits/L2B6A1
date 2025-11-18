@@ -92,8 +92,8 @@
             type HasPhone = { phone: string };   
 
             type ContactInfo = HasEmail & HasPhone;  
-               
+
             const user: ContactInfo = {  
-                email: "taz@example.com",  
+                email: "tazwoar@gmail.com",  
                 phone: "0123456789",  
             };
