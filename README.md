@@ -6,7 +6,7 @@
 
 **_ইন্টারফেস_** - অবজেক্ট শেপ এবং ক্লাস এর জন্য বেশি উপযোগী ।
 
-***interface User { ***
+***interface User {***
 ***name: string;***
 ***age: number;***
 ***}***
